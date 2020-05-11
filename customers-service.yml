@@ -10,6 +10,13 @@ spring:
   profiles: docker
   zipkin:
     baseUrl: http://tracing-server:9411
+  datasource:
+    schema: classpath*:db/mysql/schema.sql
+    data: classpath*:db/mysql/data.sql
+    url: jdbc:mysql://customers-db:3306/petclinic?useSSL=false
+    username: root
+    password: petclinic
+    initialization-mode: ALWAYS
 server:
   port: 8081
 eureka:
