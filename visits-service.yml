@@ -10,12 +10,6 @@ spring:
   profiles: docker
   zipkin:
     baseUrl: http://tracing-server:9411
-server:
-  port: 8082
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discovery-server:8761/eureka/
   datasource:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
@@ -23,3 +17,9 @@ eureka:
     username: root
     password: petclinic
     initialization-mode: ALWAYS
+server:
+  port: 8082
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/
