@@ -16,3 +16,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+  datasource:
+    schema: classpath*:db/mysql/schema.sql
+    data: classpath*:db/mysql/data.sql
+    url: jdbc:mysql://visits-db:3306/petclinic?useSSL=false
+    username: root
+    password: petclinic
+    initialization-mode: ALWAYS
